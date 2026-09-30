@@ -6,13 +6,13 @@
 <title>LensLab Support</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --bg:#0b0b0c;
-  --panel:#151517;
-  --panel-2:#1c1c1f;
-  --line:#2a2a2e;
+  --panel:#151417;
+  --panel-2:#1c1b1f;
+  --line:#2b2a2e;
   --fg:#f4f3ef;
   --muted:#9a9a9f;
   --accent:#ffcc00;
@@ -31,8 +31,8 @@ body{
   padding-block:48px;
 }
 h1,h2,h3{
-  font-family:'Sora',system-ui,-apple-system,Segoe UI,sans-serif;
-  font-weight:600;
+  font-family:'Bricolage Grotesque',system-ui,-apple-system,Segoe UI,sans-serif;
+  font-weight:700;
   margin:0;
 }
 a{color:var(--accent)}
@@ -52,15 +52,16 @@ a{color:var(--accent)}
 
 header{text-align:center;padding-block:20px 36px}
 .eyebrow{
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  font-family:'IBM Plex Mono',ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--accent);margin-bottom:14px;
 }
-h1{font-size:clamp(30px,6vw,42px);letter-spacing:-0.01em}
+h1{font-size:clamp(32px,7vw,46px);letter-spacing:-0.015em}
 .tagline{color:var(--muted);font-size:17px;margin-top:10px}
 
 .icon{
   width:64px;height:64px;margin:0 auto 18px;
-  border-radius:16px;
+  border-radius:50%;
   background:radial-gradient(circle at 32% 28%,#2a2a2e,#101012 70%);
   border:1px solid var(--line);
   display:flex;align-items:center;justify-content:center;
@@ -71,18 +72,19 @@ section{margin-top:40px}
 .card{
   background:var(--panel);
   border:1px solid var(--line);
-  border-radius:14px;
+  border-radius:4px;
   padding:22px 24px;
 }
 .section-title{
-  font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+  font-family:'IBM Plex Mono',ui-monospace,monospace;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--muted);margin-bottom:16px;
 }
 
-.features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 @media (max-width:480px){.features{grid-template-columns:1fr}}
 .feature{
-  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);border:1px solid var(--line);border-radius:4px;
   padding:16px 16px;
 }
 .feature .f-icon{color:var(--accent);font-size:18px;margin-bottom:8px;display:block}
@@ -91,18 +93,18 @@ section{margin-top:40px}
 
 .faq-item{border-bottom:1px solid var(--line);padding-block:16px}
 .faq-item:last-child{border-bottom:none}
-.faq-item h3{font-size:15.5px;margin-bottom:6px}
+.faq-item h3{font-size:15.5px;margin-bottom:6px;font-family:'IBM Plex Sans',sans-serif;font-weight:600}
 .faq-item p{margin:0;color:var(--muted);font-size:14.5px}
 
 .contact-row{
   display:flex;align-items:center;justify-content:space-between;gap:12px;
-  background:var(--panel-2);border:1px solid var(--line);border-radius:10px;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:4px;
   padding:14px 16px;margin-top:10px;flex-wrap:wrap;
 }
-.contact-row span{font-size:14.5px;word-break:break-all}
+.contact-row span{font-size:14.5px;word-break:break-all;font-family:'IBM Plex Mono',ui-monospace,monospace}
 .copy-btn{
   border:1px solid var(--accent-dim);background:transparent;color:var(--accent);
-  font:inherit;font-size:13px;padding:8px 14px;border-radius:8px;cursor:pointer;
+  font:inherit;font-size:13px;padding:8px 14px;border-radius:999px;cursor:pointer;
   white-space:nowrap;
 }
 .copy-btn:hover{background:rgba(255,204,0,.08)}
@@ -112,7 +114,7 @@ footer{
   margin-top:52px;text-align:center;color:var(--muted);font-size:13px;
   border-top:1px solid var(--line);padding-top:20px;
 }
-footer .brand{color:var(--fg);font-weight:600}
+footer .brand{color:var(--fg);font-weight:600;font-family:'Bricolage Grotesque',sans-serif}
 </style>
 </head>
 <body>
@@ -164,19 +166,23 @@ footer .brand{color:var(--fg);font-weight:600}
       <div class="card">
         <div class="faq-item">
           <h3>Is LensLab free?</h3>
-          <p>Yes — LensLab starts free, with the core simulator and planning tools. A subscription unlocks the full lens database and pro tools, at a fraction of what comparable previsualization apps cost.</p>
+          <p>Yes — LensLab is free to use, with the core simulator and planning tools available from the start.</p>
         </div>
         <div class="faq-item">
           <h3>Which devices does it support?</h3>
           <p>LensLab runs on iPhone, iOS 17 and later. iPad support is on the roadmap.</p>
         </div>
         <div class="faq-item">
-          <h3>Does LensLab work with any camera or lens?</h3>
-          <p>The simulator models field of view and aspect ratio for common sensor formats and focal lengths, so you can plan with almost any combination before you're on set — no specific camera brand required.</p>
+          <h3>Can I actually shoot with it, or is it just a preview?</h3>
+          <p>Both — LensLab's viewfinder is a real mobile camera, so you can plan the shot and shoot it in the same app, with Log and zebra active while you record.</p>
         </div>
         <div class="faq-item">
-          <h3>How do I cancel my subscription?</h3>
-          <p>Subscriptions are billed and managed through your Apple ID. Open Settings → your name → Subscriptions on your iPhone to change or cancel at any time.</p>
+          <h3>Does it have presets for different types of shoots?</h3>
+          <p>Yes — pick a preset for the kind of shoot you're doing (interview, run &amp; gun, establishing shot, product, vlog) and LensLab sets the focal length, aspect ratio and exposure tools to match.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does LensLab work with any camera or lens?</h3>
+          <p>The simulator models field of view and aspect ratio for common sensor formats and focal lengths, so you can plan with almost any combination before you're on set — no specific camera brand required.</p>
         </div>
         <div class="faq-item">
           <h3>I found a bug, or have a feature request</h3>
