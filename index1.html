@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LensLab Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#0b0b0c;
+  --panel:#151517;
+  --panel-2:#1c1c1f;
+  --line:#2a2a2e;
+  --fg:#f4f3ef;
+  --muted:#9a9a9f;
+  --accent:#ffcc00;
+  --accent-dim:#8a7300;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  padding-inline:20px;
+  padding-block:48px;
+}
+h1,h2,h3{
+  font-family:'Sora',system-ui,-apple-system,Segoe UI,sans-serif;
+  font-weight:600;
+  margin:0;
+}
+a{color:var(--accent)}
+::selection{background:var(--accent);color:#1a1500}
+
+.wrap{max-width:760px;margin-inline:auto;position:relative}
+
+.frame{position:relative;padding:28px 4px 4px}
+.frame::before,.frame::after,.frame .br,.frame .bl{
+  content:"";position:absolute;width:22px;height:22px;
+  border:2px solid var(--accent);opacity:.85;
+}
+.frame::before{top:0;left:0;border-right:none;border-bottom:none}
+.frame::after{top:0;right:0;border-left:none;border-bottom:none}
+.frame .bl{bottom:0;left:0;border-right:none;border-top:none}
+.frame .br{bottom:0;right:0;border-left:none;border-top:none}
+
+header{text-align:center;padding-block:20px 36px}
+.eyebrow{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+}
+h1{font-size:clamp(30px,6vw,42px);letter-spacing:-0.01em}
+.tagline{color:var(--muted);font-size:17px;margin-top:10px}
+
+.icon{
+  width:64px;height:64px;margin:0 auto 18px;
+  border-radius:16px;
+  background:radial-gradient(circle at 32% 28%,#2a2a2e,#101012 70%);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+}
+.icon svg{width:30px;height:30px}
+
+section{margin-top:40px}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:22px 24px;
+}
+.section-title{
+  font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:16px;
+}
+
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:480px){.features{grid-template-columns:1fr}}
+.feature{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 16px;
+}
+.feature .f-icon{color:var(--accent);font-size:18px;margin-bottom:8px;display:block}
+.feature h3{font-size:15px}
+.feature p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.faq-item{border-bottom:1px solid var(--line);padding-block:16px}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-size:15.5px;margin-bottom:6px}
+.faq-item p{margin:0;color:var(--muted);font-size:14.5px}
+
+.contact-row{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:10px;
+  padding:14px 16px;margin-top:10px;flex-wrap:wrap;
+}
+.contact-row span{font-size:14.5px;word-break:break-all}
+.copy-btn{
+  border:1px solid var(--accent-dim);background:transparent;color:var(--accent);
+  font:inherit;font-size:13px;padding:8px 14px;border-radius:8px;cursor:pointer;
+  white-space:nowrap;
+}
+.copy-btn:hover{background:rgba(255,204,0,.08)}
+.copy-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+footer{
+  margin-top:52px;text-align:center;color:var(--muted);font-size:13px;
+  border-top:1px solid var(--line);padding-top:20px;
+}
+footer .brand{color:var(--fg);font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="frame">
+    <span class="bl"></span><span class="br"></span>
+
+    <header>
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="3.2" stroke="#ffcc00" stroke-width="1.6"/>
+          <path d="M3 8V4h4M17 4h4v4M21 16v4h-4M7 20H3v-4" stroke="#ffcc00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="eyebrow">Support</div>
+      <h1>LensLab</h1>
+      <p class="tagline">Frame your shot before you shoot.</p>
+    </header>
+
+    <section>
+      <div class="section-title">What LensLab does</div>
+      <div class="features">
+        <div class="feature">
+          <span class="f-icon">◎</span>
+          <h3>Lens &amp; FOV Simulator</h3>
+          <p>Preview focal length and aspect ratio live, through your own camera.</p>
+        </div>
+        <div class="feature">
+          <span class="f-icon">▤</span>
+          <h3>Shot Planning</h3>
+          <p>Shot lists and moodboards for every scene, in one place.</p>
+        </div>
+        <div class="feature">
+          <span class="f-icon">〜</span>
+          <h3>Log &amp; Zebra</h3>
+          <p>Real Log-format preview and exposure zebra, right in the viewfinder.</p>
+        </div>
+        <div class="feature">
+          <span class="f-icon">▣</span>
+          <h3>Gallery</h3>
+          <p>Reference shots and stills, organized by project and scene.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Frequently asked</div>
+      <div class="card">
+        <div class="faq-item">
+          <h3>Is LensLab free?</h3>
+          <p>Yes — LensLab starts free, with the core simulator and planning tools. A subscription unlocks the full lens database and pro tools, at a fraction of what comparable previsualization apps cost.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which devices does it support?</h3>
+          <p>LensLab runs on iPhone, iOS 17 and later. iPad support is on the roadmap.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does LensLab work with any camera or lens?</h3>
+          <p>The simulator models field of view and aspect ratio for common sensor formats and focal lengths, so you can plan with almost any combination before you're on set — no specific camera brand required.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I cancel my subscription?</h3>
+          <p>Subscriptions are billed and managed through your Apple ID. Open Settings → your name → Subscriptions on your iPhone to change or cancel at any time.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I found a bug, or have a feature request</h3>
+          <p>Reach out below — reports from people actually shooting with the app are what shape what gets built next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Contact</div>
+      <p style="color:var(--muted);font-size:14.5px;margin:0">
+        Built by a two-person team. For support, feedback or bug reports, email us directly:
+      </p>
+      <div class="contact-row">
+        <span id="email">diyar.sky7777@gmail.com</span>
+        <button class="copy-btn" id="copyBtn">Copy</button>
+      </div>
+    </section>
+
+    <footer>
+      <span class="brand">LensLab</span> · built by Team TwoD
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('copyBtn');
+  var email = document.getElementById('email').textContent.trim();
+  btn.addEventListener('click', function(){
+    function fallback(){
+      try{
+        var range = document.createRange();
+        range.selectNodeContents(document.getElementById('email'));
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }catch(e){}
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(function(){
+        btn.textContent = 'Copied';
+        setTimeout(function(){ btn.textContent = 'Copy'; }, 1600);
+      }).catch(fallback);
+    } else {
+      fallback();
+    }
+  });
+})();
+</script>
+</body>
+</html>
